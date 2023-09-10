@@ -3,8 +3,9 @@
 #include "src/services/CommandLine/Student/Student.h"
 
 int main() {
-    auto students = commandLine::Student::CreateFromUserInput();
+    setlocale(LC_ALL, "Russian");
 
+    auto students = commandLine::Student::CreateFromUserInput();
     services::Student::PrintStudents(students);
 
     return 0;
